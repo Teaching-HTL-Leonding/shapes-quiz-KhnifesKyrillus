@@ -2,14 +2,18 @@
 {
     public class Rectangle : IShape
     {
-        public double GetRadius()
+        public Rectangle(double length, double width)
         {
-            throw new System.NotImplementedException();
+            Length = length;
+            Width = width;
         }
+
+        private double Length { get; }
+        private double Width { get; }
 
         public double GetArea()
         {
-            throw new System.NotImplementedException();
+            return Length * Width;
         }
     }
 }

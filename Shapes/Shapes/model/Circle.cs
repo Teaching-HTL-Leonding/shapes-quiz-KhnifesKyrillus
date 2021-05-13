@@ -1,15 +1,19 @@
-﻿namespace Shapes.model
+﻿using System;
+
+namespace Shapes.model
 {
     public class Circle : IShape
     {
-        public double GetRadius()
+        public Circle(double radius)
         {
-            throw new System.NotImplementedException();
+            Radius = radius;
         }
+
+        private double Radius { get; }
 
         public double GetArea()
         {
-            throw new System.NotImplementedException();
+            return Math.PI * Math.Pow(Radius, 2);
         }
     }
 }

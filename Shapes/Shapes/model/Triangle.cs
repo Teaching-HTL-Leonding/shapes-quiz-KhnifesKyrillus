@@ -2,14 +2,18 @@
 {
     public class Triangle : IShape
     {
-        public double GetRadius()
+        public Triangle(double height, double baseSide)
         {
-            throw new System.NotImplementedException();
+            Height = height;
+            BaseSide = baseSide;
         }
+
+        private double Height { get; }
+        private double BaseSide { get; }
 
         public double GetArea()
         {
-            throw new System.NotImplementedException();
+            return (BaseSide * Height) / 2;
         }
     }
 }
